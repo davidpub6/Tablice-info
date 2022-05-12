@@ -1,0 +1,149 @@
+------------28-04-22------------
+
+Z35:
+
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+int a[8];
+int L_pob_wieksze = 0;
+int L_pob_rowne = 0;
+int L_pob_mniejsze = 0;
+for(int i=0;i<=7;i++)
+{
+cout<<"podaj A["<<i<<"]=";
+cin>>a[i];
+if(a[i]>0){L_pob_wieksze++;}
+if(a[i]==0){L_pob_rowne++;}
+if(a[i]<0){L_pob_mniejsze++;}
+}
+cout<<"\n";
+cout<<"w tablicy A jest:"<<"\n";
+for(int i=0;i<=7;i++)
+{
+cout<<"w komorce A["<<i<<"]="<<a[i]<<"\n";
+}
+cout<<"\n";
+cout<<"Liczb wiekszych od zera jest="<<L_pob_wieksze<<"\n";
+cout<<"Liczb rownych zero jest="<<L_pob_rowne<<"\n";
+cout<<"Liczb mniejszychh od zera jest="<<L_pob_mniejsze<<"\n";
+system("PAUSE");
+return EXIT_SUCCESS;
+}
+
+--------------------------------------------------------------------------------------------------
+
+!DO DOMU!
+
+3 linki
+zrzut ekranu programu
+kod programu
+algorytm przerysowany programu
+
+macierz jest to pojecie uzywane w matematyce. w infromatyce nazywane jest tablica. 
+czyli jest to prostokatny zbior liczb
+
+macierz jednostkowa - jest to taka macierz ktora na glownej przekatnej ma 1 a pozozstale elementy to 0. jest to tablica kwadratowa czyli ilosc wierszy = ilosc kolumn
+narysowac tablice (macierz) jednostkowa o wymiarze 5. podac wzor do generowania takiej tablicy
+
+
+------------12-05-22------------
+
+Z36:
+
+#include <cstdlib>
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int a[8][8];
+    for(int i=0;i<8;i++)
+    {
+        for(int j=0;j<8;j++)
+        {
+           if(i==j) {a[i][j]=9;}
+           else
+           a[i][j]=1;
+        }
+    }
+    for(int i1=0;i1<8;i1++)
+    {
+        for(int j1=0;j1<8;j1++)
+        {
+           cout<<a[i1][j1]<<" ";
+        }
+        cout<<"\n";
+    }
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
+
+------------------------------------------------------------------------------------------------------
+
+Z37:
+
+#include <cstdlib>
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int a[6][6];
+    for(int i=0;i<6;i++)
+    {
+        for(int j=0;j<6;j++)
+        {
+           if(i>=j) {a[i][j]=1;}
+           else
+           a[i][j]=0;
+        }
+    }
+    for(int i1=0;i1<6;i1++)/*Kolumna*/
+    {
+        for(int j1=0;j1<6;j1++)/*Wiersz*/
+        {
+           cout<<a[i1][j1]<<" ";
+        }
+        cout<<"\n";
+    }
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
+
+------------------------------------------------------------------------------------------------------
+
+Napisac prog. znajdujacy najwiekszy i najmniejszy element w tablicy 5-elementowy
+
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+  int a[5];
+  int max=-9999; int min=9999;
+  
+  for(int i=0;i<=4;i++)
+  {
+    cout<<"podaj A["<<i<<"]=";
+    cin>>a[i];
+    if (a[i]>max){max = a[i];}
+    if (a[i]<min){min = a[i];}
+  }
+  
+  cout<<"w tablicy A jest"<<"\n";
+  
+  for(int i=0;i<=4;i++)
+  {
+    cout<<"w komorce A["<<i<<"]="<<a[i]<<"\n";
+  }
+  cout<<"max="<<max<<"\n";
+  cout<<"min="<<min<<"\n";
+  system("PAUSE");
+  return EXIT_SUCCESS;
+}
+
+------------------------------------------------------------------------------------------------------
+
